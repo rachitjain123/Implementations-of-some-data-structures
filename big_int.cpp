@@ -352,6 +352,7 @@ int main()
 {
     bigint a,b;
     string sa, sb;
+    cin>>sa>>sb;
     for (int i = 0; i < 10; i++)
         sa += i % 10 + '0';
     for (int i = 0; i < 20000; i++)
@@ -359,8 +360,8 @@ int main()
     a = bigint(sa);
     b = bigint(sb);
      clock_t start = clock();
-    bigint c = a / b;
+    bigint c = a*b;
     fprintf(stderr, "time=%.3lfsec\n", 0.001 * (clock() - start));
-    //cout<<c;
+    cout<<c;
     return 0;
 }
